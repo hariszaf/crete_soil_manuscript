@@ -133,11 +133,11 @@ a global effort to enable Findable Accessible Interoperable and Reusable (FAIR) 
 For sequencing data the Genomic Standards
 Consortium (GSC) \parencite{Field2011} has established checklists, like the MIMARKS \parencite{yilmaz2011minimum}
 standards among others, and has been an advocate for open and unrestricted data \parencite{Amann2019}.
-There are global resources and platforms databases like ENA \parencite{ocathail2024the-european},
+There are global resources and platforms databases like European Nucleotide Archive (ENA) \parencite{ocathail2024the-european},
 JGI Genome Portal \parencite{nordbergGenomePortalDepartment2014a} and others.
 Biodiversity is represented in ecosystems as point occurrences of each taxon. The
 DarwinCore standards have enabled global of species occurrences \parencite{Wieczorek2012}.
-GBIF is a global aggregator that contains such information about all ecosystems from 
+Global Biodiversity Information Facility (GBIF) is a global aggregator that contains such information about all ecosystems from 
 different resources \parencite{noauthor_gbif_nodate}. 
 IUCN redlist \parencite{iucn2024} is also an important resource of species occurrences,
 habitats, threats and conservation status of taxa. Redlists contain 
@@ -146,7 +146,8 @@ after some years depending on the country and group.
 
 Open data soil data are hosted by the 
 European Soil Data Centre \parencite{panagos2022european}, edaphobase 2 \parencite{russell2024edaphobase}
-and the World Soil Information Service (WoSIS) of the ISRIC \parencite{Batjes2024}. Regarding the latter, a unified
+and the World Soil Information Service (WoSIS) of the International Soil Reference and Information Centre (ISRIC) \parencite{Batjes2024}.
+Regarding the latter, a unified
 platforms called SoilGrids provides open access to many predicted maps \parencite{poggio-soil-7-217-2021}.
 Apart from samplings,
 spatial and remote sensing data are openly available terrestrial ecosystems.
@@ -276,7 +277,7 @@ and subject.
 
 The data of samplings contain sequences (fastq files), biodiversity occurrences (tab separated files)
 and soil (tab separated files), using ENA, GBIF and WoSIS respectively.
-The ENA API was used with a POST request containing the bounding box of Crete as a query \parencite{yuan2023the-european}. This 
+The ENA API was used with a POST request containing the bounding box of Crete as a query \parencite{ocathail2024the-european}. This 
 query returned a list with the sample identifiers. Using this list and a custom python script the API
 was invoked with GET requests to retrieve all the available metadata for each sample.
 The GBIF online user interface was used to query occurrence data contained in
@@ -314,7 +315,7 @@ mapping units and taxonomic soil classification \parencite{fao2023}.
 
 This study uses the ISD Crete data that have been deposited
 in the European Nucleotide Archive (ENA) at EMBL-EBI under accession number PRJEB21776.
-The raw sequences (fastq files) and metadata (xml files) were downloaded with custom scripts using the ENA API \parencite{Yuan2023}.
+The raw sequences (fastq files) and metadata (xml files) were downloaded with custom scripts using the ENA API \parencite{ocathail2024the-european}.
 Specific information regarding the ISD sampling, DNA extractions, PCR and sequencing
 protocols are discussed here \parencite{holm2025first}.
 
@@ -331,7 +332,7 @@ For PCoA ordination the ape R package \parencite{Paradis2004} and UMAP python li
 U-CIE R package was used for coloring 3 dimensional data \parencite{Koutrouli2022} to 
 visualise the $\beta$ diversity differences of samples on the map.
 Taxa functional annotation was implemented with the manually curated FAPROTAX database
-with the accompanied python script \parencite{Louca2016}.
+with the accompanied python script \parencite{loucaDecouplingFunctionTaxonomy2016}.
 %The network inference was facilitated with FlashWeave 0.19.2 \parencite{Tackmann2019}.
 %To use FlashWeave we reduced 
 %the abundance table of the ASVs to keep the ones at the genus or species level.
@@ -361,15 +362,14 @@ of a multitude of resources with distinct information, Figure \ref{fig:crete_ide
 These data are open access
 yet their integration and interoperability requires manual effort and curation. 
 Bringing all these data together allowed for a schematic representation of 
-data "morphospace". Major axes of the data "morphospace" concern their
+the data "morphospace". Major axes of the data "morphospace" concern their
 data structure, temporal scale and spatial scale, as represented in Figure \ref{fig:crete_idea_fig1}B. 
 For example, species biodiversity occurrences (Atlases), e.g Atlas of the Hellenic flora \parencite{strid2024atlas}, 
 are monumental works, albeit lacking structured data standards and they are 
 limited in their temporal scale. Whereas, Remote Sensing data follow global 
 standards, cover the globe and also produce time series data.
-Biodiversity Observation Networks (BON stations) are available only for marine systems
-currently, e.g. ARMS \parencite{obst2020arms,santi2023emobon}, 
-which provide long term monitoring samples, in a regional scale while aiming at 
+Biodiversity Observation Networks (BON stations) focus at providing long
+term monitoring samples in a regional scale while aiming at 
 high quality metadata and standards. 
 Living Labs \parencite{alhajj-ali2025a-review}, are also an novel approach focusing on 
 monitoring agriculture in the local scale, they haven't focused on 
@@ -404,8 +404,8 @@ Environmental sciences & 177 & Language, Communication and Culture & 1490 & Othe
 \end{table}
 
 Regarding the historical literature from BHL,
-The largest biodiversity library is BHL with 62 million text pages from 292,000 unique documents. 
-All pages were searched to find the documents relevant of Crete which resulted in
+the largest biodiversity library is BHL with 62 million text pages from 292,000 unique documents. 
+All pages were downloaded and searched to find the documents relevant of Crete which resulted in
 3,696 documents and 35,130 pages exhibited five or more occurrences of keywords related to Crete.
 Taxon named recognition based on the gnfinder tool on each OCRed page of BHL \parencite{mozzherin_gnamesgnfinder_2022},
 revealed that 890 documents, contained more that 50 different taxon names.
@@ -425,27 +425,28 @@ It covers an area of 8,347 km\textsuperscript{2}, encompassing contrasting featu
 mountains and coastlines; gorges and plateaus; arid areas and forests; all in a confined space, Table \ref{table:crete_data_cube_area}, Figure \ref{fig:crete-data-cube-maps}.
 The geology of Crete has formed through drastic tectonics \parencite{fassoulas1998the-structural} and is dominated by carbonate formations, primarily limestones
 of the Tripolis (1,253 km\textsuperscript{2}), Plattenkalk (1,347 km\textsuperscript{2}),
-and Pindos (248 km\textsuperscript{2}) units. 
+and Pindos (248 km\textsuperscript{2}) units Table \ref{table:crete_data_cube_area}. 
 Regarding soil type from the HWSD (Harmonized World Soil Database) reveals
 Lithic Leptosols (4777 km\textsuperscript{2}) as predominant (61.11\%).
 Calcaric Regosols cover about 27.82\%, and along with Lithic Leptosols 
-they are frequently found on karst landscapes.
+they are frequently found on karst landscapes Table \ref{table:crete_data_cube_area}.
 
 Based on the Corine Land Cover, the most common vegetation found in Crete is scrub and herbaceous (3798 km\textsuperscript{2}) 
 followed by permanent crops at 2368 km\textsuperscript{2}. 
 Land cover change appears to be fast the past 40 years, with shrublands being under threat,
 with habitat exploitation and grazing being a major drivers \parencite{JouffroyBapicot2016}. 
-The HILDA+ dataset \parencite{winkler2021global} estimates a 250 km\textsuperscript{2}
-of land transitioning to urban, while 57 of urban fabric has moved to various other land types.
-Cropland experienced the extensive changes, shifting 649 km\textsuperscript{2}
-units to pasture/rangeland, 163 km\textsuperscript{2} to forest.
+The HILDA+ dataset \parencite{winkler2021global} estimates a 150 km\textsuperscript{2}
+of land transitioning to urban mostly in coastal areas, 
+while only 10 km\textsuperscript{2} of urban fabric has moved to various other land types.
+Cropland experienced the extensive changes, shifting 674 km\textsuperscript{2}
+units to pasture/rangeland, 149 km\textsuperscript{2} to forest.
 
 The largest part of the island is considered semi-arid (6244 km\textsuperscript{2}),
 followed by dry sub-humid (1323 km\textsuperscript{2}), and humid with (537 km\textsuperscript{2}).
 Desertification risk assessments reveal 1,118 km\textsuperscript{2} area
 of fragile regions (F3, high fragility) \parencite{KARAMESOUTI2018266}.
 Critical areas of desertification extend to 1632 km\textsuperscript{2} of low, medium and high fragility.
-Erosion models of the soils of Crete showed a loss of 8.000 ha\textsuperscript{-1} year \textsuperscript{-1}
+Erosion models of the soils of Crete showed a mean annual erosion risk of losing 2000 tons per km\textsuperscript{2} in 634 km\textsuperscript{2} of Crete,
 which is high for the Mediterranean, which in natural areas is attributed mostly to grazing \parencite{panagos2014seasonal}.
 All these data are alarming for the loss of soil functions and desertification in Crete.
 The protected areas of Crete can be used for soil conservation to counterbalance
@@ -681,7 +682,7 @@ used to assign functions to microbial taxa. In addition, amplicon studies like I
 cannot lead to certain results at the strain level and microbes are known for 
 their high degree of functional gene exchange in the environment \parencite{douglas2020picrust2}. 
 Early studies in soil metagenomics showed that deeper sequencing was needed to 
-accurately predict functions especially in ecosystems with low biodiversity like deserts \parencite{fierer2012crossbiome}.
+accurately predict functions especially in ecosystems with low biodiversity like deserts \parencite{fierer2012cross-biome}.
 Reversely, functional groups when studied at the ecosystem level can be described 
 without gene specific information because there is a correlation of function with taxonomy \parencite{loucaDecouplingFunctionTaxonomy2016}.
 These projection can act as a preliminary assessment as shown in \textcite{Labouyrie2023}.
@@ -709,9 +710,13 @@ people \parencite{bennett2022social}.
 This approach is necessary to decipher the complexity and emergent properties of soil \parencite{jorna2024the-underground,philippot2024the-interplay}
 encompassing interactions of fauna, flora and microbes \parencite{Fry2019, Crowther2019,GRANDY201640,Delgado-Baquerizo2020}.
 Yet, there are many technical and cultural challenges of harnessing multiple data types and data structures across disciplines \parencite{Enquist_2024}.
+
 Once these challenges were surpassed, the soil microbiome health assessment became plausible.
 For example, areas were identified as vulnerable areas and containing increased relative
 abundances of potential pathogen, like Richtis gorge.
+
+More about findings
+
 
 Regarding data gaps, it was noticed that, even though plants have been studied in
 Crete since 300 BC \parencite{Krimbas_2005},
