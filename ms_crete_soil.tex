@@ -26,7 +26,7 @@ urlcolor=olive
 % Adjust bibliography font size
 \renewcommand*{\bibfont}{\small} % Use \footnotesize, \small, or other sizes
 % title
-\title{Harnessing Heterogeneous Data for Soil Health Assessment in Island Landscapes}
+\title{Meta-analysis of island soil microbiome reveals soil health indicators}
 % authors
 \author{
 Savvas Paragkamian\textsuperscript{1,2,\dag, \P},
@@ -35,10 +35,10 @@ Haris Zafeiropoulos\textsuperscript{4}, \and
 Christina Pavloudi\textsuperscript{5},
 Christos A. Christakis\textsuperscript{1}, \and
 Ioannis Antoniou\textsuperscript{8},
+Giorgos Kotoulas\textsuperscript{2},
 Panagiotis F. Sarris\textsuperscript{1,8}, \and
 Lynn Schriml\textsuperscript{3},
-Giorgos Kotoulas\textsuperscript{2, *, \P},
-Evangelos Pafilis\textsuperscript{2, *, \P}
+Evangelos Pafilis\textsuperscript{2, \P}
 }
 \begin{document}
 
@@ -57,43 +57,10 @@ Evangelos Pafilis\textsuperscript{2, *, \P}
 \vspace{1em}
 
 \noindent\textsuperscript{\dag} These authors contributed equally as first authors. \\
-\noindent\textsuperscript{*} These authors contributed equally as last authors. \\
-\noindent\textsuperscript{\P} Corresponding authors: \texttt{s.paragkamian@hcmr.gr}, \texttt{kotoulas@hcmr.gr}, \texttt{pafilis@hcmr.gr}
+\noindent\textsuperscript{\P} Corresponding authors: \texttt{s.paragkamian@hcmr.gr}, \texttt{pafilis@hcmr.gr}
 
 \begin{abstract}
 
-    
-    Developing integrated soil health indicators that link microbial communities,
-    ecological variables, and spatial data remains a major challenge.
-    Understanding soil ecosystem processes and identifying warning signals
-    of vulnerability require interdisciplinary approaches that combine
-    biological, physicochemical, and landscape scale information. 
-    This need is evident across all ecosystems, and particularly in soils,
-    due to their inherent heterogeneity and complex architecture.
-    Despite numerous studies on soil microbiome functioning worldwide,
-    substantial knowledge gaps persist.
-    Islands provide great natural laboratories for this development
-    because they minimize latitudinal confounding effects and enable dense sampling.
-    The island of Crete, Greece has long been considered as a miniature continent with high contrasts in
-    vegetation cover, elevation, climatic conditions and due to its' complex geology and landscapes. 
-    Here we synthesize open data on Cretan soils and landscapes; including
-    literature information, field-sampling datasets, and spatial map layers,
-    to identify microbiome indicators relevant to soil condition, degradation risk,
-    and ecosystem resilience.
-    We compiled information from 18 independent resources,
-    four (4) for literature, five (5) for field samplings and nine (9) for map layers,
-    and identified gaps of available open data from published works.
-    Then, we selected the Island Sampling Day (ISD) Crete 2016 dataset 
-    (144 soil microbiome samples from 72 locations) as a case study to investigate microbial
-    and environmental indicators.
-    Integrating ISD with broader Cretan datasets enabled us to 
-    detect potential pathogenic risks in pristine ecosystems,
-    and identify microbial community shifts associated with desertification and erosion sensitivity.
-    Overall, this data-first, open-science synthesis provides the foundation
-    for FAIR data (Findable, Accessible, Interoperable and Reusable) based
-    soil-health indicators in Mediterranean island
-    landscapes and offers a reproducible framework for soil degradation
-    and vulnerability assessments.
 
 \end{abstract}
 
@@ -102,134 +69,16 @@ Evangelos Pafilis\textsuperscript{2, *, \P}
 \noindent\textbf{Highlights}
 
 \begin{itemize}
-    \item Towards a data soil scape of an island
-    \item Building a system based on the rich open data about Crete island allows for complex associations and novel hypotheses
-    \item There is wealth of data about Crete in many different forms and databases across ecosystem scales and scientific disciplines,
     \item Data integration of soil in Crete revealed vulnerable ecosystems
 \end{itemize}
 
 
 \section{Introduction}\label{intro_idea}
 
-Disentangling the soil ecosystem functioning requires an holistic and 
-multidisciplinary approach \parencite{vogel2022}. 
-Soils are characterised by multiple properties; chemical (pH, nutrients etc.),
-physical (grain size, clay content etc.) and biological that 
-form complex interdependent interactions \parencite{philippot2024the-interplay}.
-Biodiversity of soils covers
-all forms of life, fauna, flora, bacteria, archaea, fungi, viruses \parencite{Orgiazzi2018,Anthony2023}. 
-Bacteria and archaea are considered major drivers for the functionality of soil.
-They influence and are influenced by their environment and their community structure 
-defies their macroscopic functionality \parencite{Bahram2018}.
 
-Global soil microbiome studies have been employed to decipher microbial community
-compositions \parencite{fierer2012cross-biome,thompson2017a-communal, Delgado-Baquerizo2018, Labouyrie2023},
-functions \parencite{Bahram2018} and biogeography \parencite{Martiny2006, Guerra2020}.
-The integration of the these multifaceted 
-data is needed to decipher and control soil functioning \parencite{ramirez2015toward}.
-All this work is needed in order to meet
-UN and EU soil goals for the 2030 and 2050 for healthy soils \parencite{LAL2021e00398}.
+In this study we ask: 
 
-Data and metadata of these samplings are stored in databases;
-a global effort to enable Findable Accessible Interoperable and Reusable (FAIR) data \parencite{Wilkinson2016}.
-For sequencing data the Genomic Standards
-Consortium (GSC) \parencite{Field2011} has established checklists with minimum required metadata, like the MIMARKS \parencite{yilmaz2011minimum}
-standards among others, and has been an advocate for open and unrestricted data \parencite{Amann2019}.
-Genomic data are hosted in global resources and platforms databases like European Nucleotide Archive (ENA) \parencite{ocathail2024the-european},
-JGI Genome Portal \parencite{nordbergGenomePortalDepartment2014a} and others.
-Biodiversity data is represented in ecosystems as point occurrences of each taxon. The
-DarwinCore standards have enabled global of species occurrences \parencite{Wieczorek2012}.
-Global Biodiversity Information Facility (GBIF) is a global aggregator that contains such information about all ecosystems from 
-different resources \parencite{noauthor_gbif_nodate}. 
-IUCN redlist \parencite{iucn2024} is also an important resource of species 
-threats and conservation status, habitats and taxa distributions. Redlists contain 
-manually curated content by experts of each taxonomic group which is updated
-after some years depending on the country and group.
-
-Open soil data are hosted by the 
-European Soil Data Centre \parencite{panagos2022european}, edaphobase 2 \parencite{russell2024edaphobase}
-and the World Soil Information Service (WoSIS) of the International Soil Reference and Information Centre (ISRIC) \parencite{Batjes2024}.
-Regarding the latter, a unified
-platforms called SoilGrids provides open access to many predicted maps \parencite{poggio-soil-7-217-2021}.
-Apart from samplings,
-spatial and remote sensing data are openly available about terrestrial ecosystems.
-To name a few, there openly available climatic \parencite{Fick2017}, land cover change \parencite{winkler2021global} and normalized
-vegetation index \parencite{CopernicusNDVI2021}.
-There is also a wealth of knowledge about soil and biodiversity in the literature,
-albeit in unstructured format. 
-Databases like PubMed MEDLINE \parencite{sayers2024database}, Google Scholar, Dimensions and Biodiversity Heritage Library 
-are world class providers with different content.
-
-The aforementioned heterogeneous data are the basis of investigating the
-interactions of organisms with their surroundings through systems ecology \parencite{van-dyne1966ecosystems}.
-The representation of ecosystems by data was first mentioned as "digital earth" in the late 90s \parencite{Goodchild_2012}.
-This notion of the virtual earth was initially realised with satellite imaging,
-on-land sensors and the relevant software. Space, an area on Earth, is
-the starting point of ecosystems functioning which is influenced by geography,
-climate, geology, biodiversity and human management across scales \parencite{Zarnetske2019_towards}.
-The coupling of all these
-fields, and the data they provide, with spatial information leads to the
-digital twin of ecosystems \parencite{Voosen2020DigitalTwinEarth}. All these data can be considered as different layers
-of an Earth system data cube \parencite{mahecha2020earth}.
-
-To tackle the challenge of digital representation there have been established model ecosystems
-and scientific stations such
-as the Mo'orea Gump Station \parencite{Davies2016} and the Middle east natural laboratory \parencite{blanco-sacristan2024the-middle} among others.
-In the global and continental scale multiple studies have explored and
-discovered the remarkable diversity in soils yet there are blind spots \parencite{Guerra2020}.
-Because most soil samplings are sparse when considering the scale and the samples per area density \parencite{Dini-Andreote2021},
-apart from selected studies e.g \textcite{Karimi2020}.
-Another approach for digital representation are "scapes", distinct areas with visible features, 
-because of their confined scale and scope.
-Landscape scale, and not global or regional, has been deemed as crucial for monitoring and assessing 
-Soil Organic Carbon dynamics \parencite{doetterl2025a-landscape-scale}.
-In addition, the joining of the natural and human activities 
-together has been defined in the so-called soilscape \parencite{LAGACHERIE2001105}.
-Regarding heterogeneous data, datascape framework is promising for data explorations of soil information \parencite{rolland2024datascape:}. 
-Islandscapes 
-is also an established approach which defines the holistic ecosystem of the island
-and the interface of land and sea \parencite{Vogiatzakis_land_2017}.
-
-Islands due to their smaller scale and confined nature are useful natural ecological labs.
-They harbour 20\% of biodiversity even though they cover less than 7\% of land surface area.
-Also they are under major threats that diminish their biodiversity \parencite{fernandez-palacios2021scientists}.
-Important examples are the work of \textcite{Li2020} on soil bacteria and of \textcite{Delavaux2021} on mycorrhizal fungi studies
-in islands which show the benefits of using islands as models.
-The Island Digital Ecosystem Avatar (IDEA) is a digital representation of Mo'orea island,
-French Polynesia that has managed to integrate satellite data with sequences,
-bringing together all scales of biodiversity \parencite{Davies2016,davies2023island}.
-
-The island of Crete, Greece is a continental forarc island \parencite{ali2016},
-fifth largest island of the mediterranean (8350 km\textsuperscript{2}),
-and a mediterranean biodiversity hotspot \parencite{myers2000biodiversity}.
-It has been studied since the classical times for its'
-fauna \parencite{Sidiropoulos_Polymeni_Legakis_2017,Anastasiou2018Tenebrionid},
-flora \parencite{Krimbas_2005} and ecosystems \parencite{Grove1993}.
-It is home to the only endemic mammal of Greece, the Cretan shrew (\textit{Crocidura zimmermanni}),
-more than 350 endemic arthropods \parencite{bolanakis2024} and 183 endemic plants \parencite{Kougioumoutzis2020}
-among them a tree \textit{Zelkova abelicea}.
-
-Crete has been characterised as a miniature continent \parencite{Vogiatzakis2008_crete} because 
-of it's diversity of landscapes and seascapes.
-Multifaceted factors have shaped the
-biodiversity of the island, for example the sharp elevation gradient \parencite{trigas2013, FAZAN2017},
-the complex evolutionary history \parencite{POULAKAKIS2002} and the human - nature
-interactions over thousands of years \parencite{Vogiatzakis2008_med, Sfenthourakis2017}.
-The major threats of human activities are becoming apparent in the island's ecosystems,
-like desertification \parencite{KARAMESOUTI2018266}, soil erosion \parencite{panagos2014seasonal}, intensive grazing \parencite{JouffroyBapicot2016},
-climate change \parencite{Kougioumoutzis2020,Vogiatzakis2016} and habitat loss \parencite{ISPIKOUDIS1993259}.
-The soil microbiome has been studied in protected areas,
-i.e Natura2000 \parencite{bekris2019do-genetic}, and across the islands' ecosystems \parencite{holm2025first}.
-All these data are further establishing Crete as a great soil model island.
-
-In this study we ask: which are the resources of open data regarding soil ecosystems of Crete?
-How can we integrate these data to investigate the functioning of soil?
-Are there any alarming soil health signals in Crete derived from this integration?
-To address these questions, first we create a data repository categorised in 
-literature (text), samplings (point data) and spatial data (maps). 
-We proceed to summarise each resource contents and
-identified gaps and opportunities for subsequent analyses.
-Our aim is to establish a FAIR data summary of Crete in order to enable integrative analyses.
+Are there any alarming soil health signals in Crete derived from the rich open data?
 To further support our case we use the
 Island Sampling Day (ISD) soil microbiome data \parencite{holm2025first},
 as a large scale bacterial study, to gain insights about the differences of the
@@ -237,85 +86,6 @@ microbiome communities across land use, aridity and microbial functional categor
 
 \section{Materials and Methods}\label{integration_methods}
 
-Multiple resources and types of data are required to create
-a Cretan soil biodiversity data system (Figure \ref{fig:crete_idea_fig1}). 
-First, data were categorised in literature, sampling data (biodiversity occurrences and soil samples)
-and maps (spatial layers or rasters and vectors).
-Then, resources with open data about Crete were identified and retrieved in each category.
-
-\begin{figure}[hbt!] 
-    \centering\includegraphics[width=\columnwidth]{figures/crete_idea_fig1.png}
-    \caption{A. Resources that contain data about Crete categorized in Literature, Maps and Samplings. B. Data derived from A are placed in the ecological data space with according to the Spatial scale, Temporal scale and Data structure.}
-    \label{fig:crete_idea_fig1}
-\end{figure}
-
-\subsection{Literature}\label{crete-literature}
-
-The name of Crete is unambiguous word which reduces the false positives when performing queries in databases.
-Searches were done using different mentions of Crete such as \textit{Crete, Kriti, Kreta, and Cretan} in PubMed MEDLINE, 
-Google Scholar, Dimensions and Biodiversity Heritage Library.
-First, the MEDLINE PubMed corpus was downloaded via the ftp protocol and the E-utilities API.
-After XML files processing, the following fields were kept: PMID, DOI, Authors, Journal, Volume:Pages, Year, Title, Abstract.
-Pubmed was searched using the DIG tool \parencite{fanini2021coupling}.
-Each abstract of MEDLINE contains also associated MeSH terms which were retrieved with the \href{https://www.ncbi.nlm.nih.gov/books/NBK25497/}{E-utilities API}
-and were later summarised with custom scripts.
-
-The Dimensions platform provides a web service for complex queries 
-which was used to identify literature of 
-\textit{Crete, Kriti, Kreta, and Cretan} within
-the title and abstract fields. Output also contained the Field of Research of 
-each bibliographic entry.
-Google scholar was used through the \textit{serpapi} API using
-a python script. The same keywords were used as in the previous searches.
-
-OpenAlex 
-
-\parencite{priem2022openalexfullyopenindexscholarly}
-
-Historical literature related to the biodiversity of Crete has been explored
-using the Biodiversity Heritage Library (BHL) data model and schema, conducting searches on titles, items, and subjects.
-Items represent the digitised documents, while subjects are assigned to each title.
-The schema includes a page table with page-level information.
-An archive of all transcribed texts was downloaded and search was performed on each page 
-and subject.
-
-\subsection{Samplings}\label{crete_samplings}
-
-The data of samplings contain sequences (fastq files), biodiversity occurrences (tab separated files)
-and soil (tab separated files), using ENA, GBIF and WoSIS respectively.
-The ENA API was used with a POST request containing the bounding box of Crete as a query \parencite{ocathail2024the-european}. This 
-query returned a list with the sample identifiers. Using this list and a custom python script the API
-was invoked with GET requests to retrieve all the available metadata for each sample.
-The GBIF online user interface was used to query occurrence data contained in
-the bounding box of Crete \parencite{noauthor_gbif_nodate, gbif.org-user2023occurrence}.
-IUCN redlist point data and summary of assessments were downloaded from the web interface \parencite{iucn2024}.
-Advanced filters were selected, for Land Regions option \textit{Kriti} was opted
-along with Global, European and Mediterranean scopes.
-WoSIS soil data and metadata about Crete were retrieved using the Web Feature Service (WFS) \parencite{Batjes2024}
-along with an adjusted R script.
-Edaphobase, a curated database of museum records, was also searched for soil biodiversity \parencite{BURKHARDT20143}.
-
-\subsection{Maps}\label{crete_spatial}
-
-Maps that were build for Crete or broader maps, e.g global,
-were downloaded and cropped from multiple sources.
-The land use categories were obtained from the CORINE Land Cover (CLC) 2018
-version v.2020.20u1 \parencite{CLC2023}.
-The Historic Land Dynamics Assessment (HILDA+) dataset \parencite{winkler2021global}
-facilitated the exploration of human pressures, such as changes in land usage and agriculture,
-allowing the calculation of land use alterations from 1976 to 2016.
-The protected areas of Crete were included as well from the World Database on Protected Areas using the wdpar package \parencite{Hanson2022}.
-In WorldClim 2.0, with climatic variables, such as the annual mean
-temperature and annual precipitation, were included \parencite{Fick2017}.
-The dataset on the Environmentally Sensitive Areas Index to desertification (ESAI)
-in Greece \parencite{KARAMESOUTI2018266} was also employed, alongside the
-Global Aridity Index Database \parencite{zomer2022version}.
-The geological formations of Crete were derived from the geoportal of the
-Decentralized Administration of Crete. These maps were created by the Crinno-Emeric Group
-project \url{https://geoportal.apdkritis.gov.gr/gis/apps/storymaps/stories/19690f65abbe4e8ab0141b2fe7261a8c}.
-The soil erosion map of Crete based on the G2 model was also incorporated \parencite{panagos2014seasonal}.
-Furthermore, the Harmonised World Soil Database v2 was integrated for soil
-mapping units and taxonomic soil classification \parencite{fao2023}.
 
 \subsection{Health assessments of Island Sampling Day Crete}\label{isd_data}
 
@@ -363,209 +133,6 @@ Scripts about the soil health assessment are available in
 
 \section{Results and Discussion}\label{crete_idea_results_discussion}
 
-The collection of different data types for one island, Crete, required the investigation
-of a multitude of resources with distinct information, Figure \ref{fig:crete_idea_fig1}A.
-These data are open access
-yet their integration and interoperability requires manual effort and curation. 
-Bringing all these data together allowed for a schematic representation of 
-the data "morphospace". Major axes of the data "morphospace" concern their
-data structure, temporal scale and spatial scale, as represented in Figure \ref{fig:crete_idea_fig1}B. 
-For example, species biodiversity occurrences (Atlases), e.g Atlas of the Hellenic flora \parencite{strid2024atlas}, 
-are monumental works, albeit lacking structured data standards and they are 
-limited in their temporal scale. Whereas, Remote Sensing data follow global 
-standards, cover the globe and also produce time series data.
-Biodiversity Observation Networks (BON stations) focus at providing long
-term monitoring samples in a regional scale while aiming at 
-high quality metadata and standards. 
-Living Labs \parencite{alhajj-ali2025a-review}, are also an novel approach focusing on 
-monitoring agriculture in the local scale, they haven't focused on 
-the adoption of standards and FAIR data.
-
-%data cubes and the species occurrences cube \parencite{oldoni2020occurrence,groom2023b-cubed:}
-
-\subsection{Literature}
-
-Contemporary literature material is indexed in different platforms \parencite{harzing2019two-new-kids, walters2025comparing}
-with various licenses, topic coverage and user interface features \parencite{borrego2025openalexfeaturesadvantageslimitations}.
-Regarding Crete, PubMed custom search resulted in 1556 unique abstracts. 
-The Google Scholar API returned 910 documents and the Web service of Dimensions 
-displayed an impressive 43.000 publications. 
-Each platform has a different way to interact and most importantly contained 
-material from subject fields about Crete, as shown in Table \ref{table:crete_literature}.
-
-\begin{table}[htbp]
-\centering
-\caption{Document items about Crete and their top 6 categories across PubMed, Dimensions, and Google Scholar. The list is not exhaustive and some documents can be in multiple categories}
-\label{table:crete_literature}
-\begin{tabular}{p{2.5cm}p{2.5cm}p{2.5cm}p{2.5cm}p{2.5cm}p{2.5cm}}
-\textbf{PubMed (MeSH)} & \textbf{PubMed abstracts} &
-\textbf{Dimensions Fields of Research} & \textbf{Dimensions} &
-\textbf{Google Scholar categories} & \textbf{Google Scholar} \\
-Human & 907 & History, Heritage, Archaeology & 2834 & Biodiversity & 228 \\
-Genetic phenomena & 500 & Earth sciences & 2284 & History & 200 \\
-Behaviour Mechanisms & 500 & Education & 2822 & Archaeology & 191 \\
-Infections & 200 & Historical studies & 1925 & Sociology & 136 \\
-Organic chemicals & 200 & Biomedical and Clinical Sciences & 1463 & Folklore & 118 \\
-Environmental sciences & 177 & Language, Communication and Culture & 1490 & Other & 37 \\
-\end{tabular}
-\end{table}
-
-Regarding the historical literature from BHL,
-the largest biodiversity library is BHL with 62 million text pages from 292,000 unique documents. 
-All pages were downloaded and searched to find the documents relevant of Crete which resulted in
-3,696 documents and 35,130 pages exhibited five or more occurrences of keywords related to Crete.
-Taxon named recognition based on the gnfinder tool on each OCRed page of BHL \parencite{mozzherin_gnamesgnfinder_2022},
-revealed that 890 documents, contained more that 50 different taxon names.
-Also, 1,879 items had titles in 18 languages, with the
-majority being English (1,350), German (268), French (105) and others. 
-The oldest publication in BHL that mentions Crete was printed in 1554 and contains
-the biodiversity observations in Crete written by the famous French explorer Pierre Belon \parencite{belon1554les-obseruations}. 
-In addition, there are 1482 items published before 1960 containing thousands of taxa occurrences.
-Overall, the wide range of subjects in the literature, the different languages and years of historical publications illustrate the
-global impact and interdisciplinary of the Cretan literature.
-
-\subsection{Maps}
-
-Crete is a mosaic of landscapes with diverse land cover, geology, soil type and land management,
- \parencite{Vogiatzakis2008_crete}. 
-It covers an area of 8,347 km\textsuperscript{2}, encompassing contrasting features of
-mountains and coastlines; gorges and plateaus; arid areas and forests; all in a confined space, Table \ref{table:crete_data_cube_area}, Figure \ref{fig:crete-data-cube-maps}.
-The geology of Crete has formed through drastic tectonics \parencite{fassoulas1998the-structural} and is dominated by carbonate formations, primarily limestones
-of the Tripolis (1,253 km\textsuperscript{2}), Plattenkalk (1,347 km\textsuperscript{2}),
-and Pindos (248 km\textsuperscript{2}) units Table \ref{table:crete_data_cube_area}. 
-Regarding soil type from the HWSD (Harmonized World Soil Database) reveals
-Lithic Leptosols (4777 km\textsuperscript{2}) as predominant (61.11\%).
-Calcaric Regosols cover about 27.82\%, and along with Lithic Leptosols 
-they are frequently found on karst landscapes Table \ref{table:crete_data_cube_area}.
-
-Based on the Corine Land Cover, the most common vegetation found in Crete is scrub and herbaceous (3798 km\textsuperscript{2}) 
-followed by permanent crops at 2368 km\textsuperscript{2}. 
-Land cover change appears to be fast the past 40 years, with shrublands being under threat,
-with habitat exploitation and grazing being a major drivers \parencite{JouffroyBapicot2016}. 
-The HILDA+ dataset \parencite{winkler2021global} estimates a 150 km\textsuperscript{2}
-of land transitioning to urban mostly in coastal areas, 
-while only 10 km\textsuperscript{2} of urban fabric has moved to various other land types.
-Cropland experienced the extensive changes, shifting 674 km\textsuperscript{2}
-units to pasture/rangeland, 149 km\textsuperscript{2} to forest.
-
-The largest part of the island is considered semi-arid (6244 km\textsuperscript{2}),
-followed by dry sub-humid (1323 km\textsuperscript{2}), and humid with (537 km\textsuperscript{2}).
-Desertification risk assessments reveal 1,118 km\textsuperscript{2} area
-of fragile regions (F3, high fragility) \parencite{KARAMESOUTI2018266}.
-Critical areas of desertification extend to 1632 km\textsuperscript{2} of low, medium and high fragility.
-Erosion models of the soils of Crete showed a mean annual erosion risk of losing 2000 tons per km\textsuperscript{2} in 634 km\textsuperscript{2} of Crete,
-which is high for the Mediterranean, which in natural areas is attributed mostly to grazing \parencite{panagos2014seasonal}.
-All these data are alarming for the loss of soil functions and desertification in Crete.
-The protected areas of Crete can be used for soil conservation to counterbalance
-this documented degradation. The also form networks and cover an area of 2900 km\textsuperscript{2}.
-Natura2000 areas are the largest protected areas (2371 km\textsuperscript{2})
-followed by the Wildlife Refuges (610.70 km\textsuperscript{2}).
-
-\begin{figure}[!htb] 
-    \centering\includegraphics[width=\columnwidth]{figures/map_crete_data_cube.png}
-    \caption[Crete data cube]{The twelve layers of the terrestrial environments of Crete.
-    A. The digital elevation map. B. The Corine Land Cover EEA, Level 2.
-    C. The geology of Crete. D. Rivers and gorges of Crete.
-    E. The Harmonised World Soil dataset, version 2.
-    F. The Historic Land Dynamics Assessment dataset. G. The different protection areas of the island.
-    H. The mean surface temperature of WorldClim2. I. The mean precipitation of  WorldClim2.
-    J. The aridity index of soil, from the Global Aridity Index v3. K. The G2 model of soil erosion in Crete. J. The desertification risk assessment of Greece}
-    \label{fig:crete-data-cube-maps}
-\end{figure}
-
-
-\subsection{Samplings}
-
-\subsubsection{Biodiversity}
-Open data about species occurrences in Crete discoverable through GBIF, a biodiversity aggregator.
-GBIF contains 116,000 occurrences of 7065 unique species,
-10189 unique taxa (Figure \ref{fig:crete-samplings}) \parencite{gbif.org-user2023occurrence}.
-In total, data are provided from 196 different publishers, e.g Institutions, Museum Collections, Platforms etc.
-Citizen science tools and platforms, i.e 
-Cornell Lab of Ornithology, iNaturalist.org,Observation.org, Pl@ntNet and naturgucker.de,
-provide the majority of data, totalling 98,571 occurrences which were excluded as non validated by experts.
-The oldest occurrence is from 1684,
-Historical data are also present, with 2051 occurrences and 1021 unique taxa documented 
-prior to 1960 and submitted by 62 publishers, Figure \ref{fig:crete-samplings}.
-Edaphobase, has in 26 resources with 17 different sampling points covering 120 distinct taxa.
-A part of it is included in GBIF, yet it provides some additional functionalities. Note that 
-in the center of Crete there are multiple points indicating low accuracy of locality.
-
-IUCN redlist contains assessments from 3140 species in all geographical scopes.
-Occurrences are provided for 416 species, covering 8,539 point locations, Figure \ref{fig:crete-samplings}.
-Most species assessed that reside in Crete fall under Least Concern,
-particularly within Tracheophyta (n = 366 Europe, 216 Global), 
-Arthropoda (n = 547 Europe), and Chordata (n = 248 Europe). 
-Near Threatened and Vulnerable categories occur mainly in Arthropoda and Tracheophyta.
-Mollusca have higher relative counts of Vulnerable, Endangered and Critically Endangered taxa (n=23, n = 8 and n = 3, respectively).
-
-Tracheophyta are most affected by housing and urban areas (n = 162), 
-Arthropoda by Herbicides and pesticides (n = 137), 
-Chordata by intentional and unintentional harvesting (n = 171), 
-Mollusca and Marchantiophyta by increased fire frequency and intensity (n = 49, n = 23 respectively)
-and Bryophyta by other ecosystem modifications (n = 33).
-Tourism and recreation areas are attributed as major threats across phyla.
-There are many important taxa of Crete not assessed yet in the aforementioned 
-phyla. The newly launched IUCN Microbial Conservation Specialist Group will add microbial taxa as well \parencite{gilbert2025launching}.
-
-\subsubsection{Monitoring}
-In addition, Crete has the most long term monitoring stations in Greece, Figure \ref{fig:crete-samplings}.
-Artificial reefs monitoring (ARMS-MBON) with 2 stations \parencite{obst2020arms},
-European marine omics biodiversity observation network with one station \parencite{santi2023emobon},
-LTER-Greece network with 3 stations \parencite{Skoulikidis2021lter} and the POSEIDON system with 2 stations \parencite{ntoumas2022}. 
-These are marine (5) and terrestrial (3) station collecting biodiversity data and abiotic data.
-Focusing in a confined area provides unique opportunities for data integration.
-For example in Samothrace \parencite{noll2024insights} a 15 year long study 
-showed practices to help sustain the socioecological system.
-Crete would be a great example of the digital representation of it's ecosystems
-and the human activities in order to tighten the relations with the society and 
-protect vulnerable areas.
-
-\subsubsection{Soil}
-Abiotic soil data are provided by WoSIS open platform,
-which contains soil taxonomy, physical and chemical metadata. 
-Regarding Crete, it hosts 27 soil samples which were collected by
-the Forum of European Geological Surveys (FOREGS) \parencite{nerc19017},
-the Geochemical Mapping of Agricultural and Grazing Land
-Soil in Europe (GEMAS) \parencite{reimann2018gemas} and the Soil Profile Analytical
-Database for Europe (SPADE) \parencite{Hiederer2006}.
-These data with other not publicly available,
-were the basis of the \href{https://esdac.jrc.ec.europa.eu/content/soil-map-greece-0}{soil map} of Crete 
-and Greece. 
-Comparing the maps provided in Figure \ref{fig:crete-data-cube-maps} 
-it becomes apparent that more sampling effort is required to create higher resolution maps. 
-
-
-OPEKEPE \parencite{gerontidis2025assessment}
-
-
-\parencite{stagiopoulou2025altitudes}
-
-\subsubsection{Genomics and Metagenomics}
-Regarding the genomic and metagenomic samples from Crete, ENA hosts all the public 
-available data and metadata. There are 92 studies with 1205 samples.
-From these, the 530 samples are terrestrial metagenomic samples as shown in
-Figure \ref{fig:crete-samplings}. 
-The most samples and studies are in the soil metagenome with 304 samples in 8 studies.
-The 140 samples of which belong to the
-ISD project \parencite{holm2025first}.
-Insect metagenome has 108 samples from 2 studies
-and plant metagenomes contains 69 samples in 2 studies.
-Then follows air metagenome with 61 samples during 3 studies.
-
-\begin{figure}[!htb] 
-    \centering\includegraphics[width=\columnwidth]{figures/map_crete_samples.png}
-    \caption[Samplings in Crete]{Samplings in Crete. A. GBIF occurrences in Crete.
-    B. Timeline of GBIF occurrences across kingdoms. C. All genomic samples from ENA. 
-    D. ENA terrestrial metagenomic samples in Crete. 
-    E. Edaphobase samplings in Crete.
-    F. Sampling monitoring stations in Crete include multiple LTER and BON stations.
-    G. IUCN redlist data points of the assessed species in Global, European and Mediterranean scopes.
-    H. WoSIS soil samples in Crete.}
-    \label{fig:crete-samplings}
-\end{figure}
-
-\subsection{Soil microbiome of Crete}
 
 The retrieval of metagenomic data revealed that multiple 
 seminal worldwide soil microbiome projects include one or two topsoil
@@ -629,8 +196,8 @@ Acidobacteriota aren't amongst the top phyla in 11 samples, 9 of them are beach
 ecosystems.
 
 
-%Networks specialists generalists \parencite{Barberan2012}
-%Positive and negative in soils \parencite{Liu2024}
+Networks specialists generalists \parencite{Barberan2012}
+Positive and negative in soils \parencite{Liu2024}
 
 Additional notable mentions of phyla are the Desulfobacterota which have specialist
 role in the ERR3697703 sample from Richtis gorge. Gemmatimonadota appear mostly
@@ -711,200 +278,6 @@ functions and expand the positive and negative associations in soils \parencite{
 
 \section{Conclusion}
 
-The amount of accumulated open data about Crete in literature, maps and samplings is huge
-and showcases the efforts of hundreds of scientists across the centuries.
-Here, we synthesized open data for 18 different resources, (Literature: 4, Samplings: 5 and Maps: 9) 
-which evidently put Crete on the map as an island model.
-The integration of open data,
-like the ones presented here, leads to new syntheses and hypotheses \parencite{ramirez2015toward,heberling_j_mason_data_2021}. 
-Building such systems is also a cultural treasure to society because
-they will present the uniqueness of each place and it's relation with 
-people \parencite{bennett2022social}.
-This approach is necessary to decipher the complexity and emergent properties of soil \parencite{jorna2024the-underground,philippot2024the-interplay}
-encompassing interactions of fauna, flora and microbes \parencite{Fry2019, Crowther2019,GRANDY201640,Delgado-Baquerizo2020}.
-Yet, there are many technical and cultural challenges of harnessing multiple data types and data structures across disciplines \parencite{Enquist_2024}.
-
-Once these challenges were surpassed, the soil microbiome health assessment became plausible.
-For example, areas were identified as vulnerable areas and containing increased relative
-abundances of potential pathogen, like Richtis gorge.
-
-More about findings
-
-
-socio \parencite{nikolaidis2025an-integrated}
-
-Regarding data gaps, it was noticed that, even though plants have been studied in
-Crete since 300 BC \parencite{Krimbas_2005},
-most of occurrence data being still presented in Atlases and books \parencite{dimopoulos2016,strid2024atlas,ralph1993flora}.
-Thus, the botanic community has not adopted widely the open data standards and FAIR data,
-even thought Crete has more than 2200 native plants with 183 being Cretan endemics. 
-The endemics have more than 8500 occurrences \parencite{kougioumoutzis2020plant}.
-These monumental works is crucial that are uploaded to GBIF or similar
-platforms to secure longevity, assist plant assessments and future analyses.
-IUCN also doesn't provide raw occurrences from the assessments for most species, 
-with chordata being totally absent from open redlist occurrence points.
-In addition, soil microbiome works, e.g \textcite{bekris2019do-genetic}, that 
-provide novel information about microbes in protected areas are not 
-uploaded to ENA database.
-
-Historical biodiversity data are not rescued in databases,
-with two orders of magnitude difference in the documents
-in GBIF before 1960 and the imaged documents in Biodiversity Heritage Library.
-The rescue of these data requires specialised curators to rescue and is crucial to include for 
-further comparisons and information homogeneity. 
-Of course, there must be 
-a lot of documents with important information not even imaged, thereby under 
-critical threats to become lost.
-Hence a lot of work is needed to rescue the hidden biodiversity knowledge in
-literature, natural history collections and herbaria \parencite{Paragkamian2022}.
-
-In conclusion, data combination allows for identifying sampling biases and gaps and
-offer a snapshot of the current state of knowledge, thus
-assisting decision making about conservation and ecosystem services management.
-There are many blind spots about soil functioning and in the conservation
-priorities \parencite{farfan2024preliminary}. 
-Yet, Crete as an extensively studied island can be used as an example in establishing
-soil global hotspots \parencite{Guerra2022} and soil ecosystem conservation as 
-a whole to expand the current protection of specific species to soil landscapes \parencite{guerra2021tracking}.
-Policy \parencite{KONINGER2022} across countries \parencite{Putten2023}
-without borders is an important step to protect soils which 
-the EU Soil Monitoring Law is aiming for.
-These policy advances along with the implementation of legislation in Greece \parencite{SCHISMENOS2022100035}
-are crucial to preserve the soil of Crete.
-
-\section{Appendix 1}\label{appendix1}
-
-\begingroup
-\small
-\setlength{\tabcolsep}{2.5pt}% tighter numeric col spacing
-\renewcommand{\arraystretch}{1.1}% a bit taller rows
-\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.14\textwidth}p{0.3\textwidth}r>{\raggedright\arraybackslash}p{0.14\textwidth}rrrr@{}}
-\caption{Summary of the area of maps and their classes combined with the soil microbiome from ISD data. $\alpha$ diversity is measured with Shannon index.}
-\label{table:crete_data_cube_area}\\
-\toprule
-\shortstack[l]{Map\\source} &
-\shortstack[l]{Class\\name} &
-\shortstack[c]{Area\\(km$^2$)} &
-\shortstack[c]{ISD\\Samples} &
-\shortstack[c]{Taxa\\richness} &
-\shortstack[c]{ASV\\richness} &
-\shortstack[c]{Mean\\diversity} &
-\shortstack[c]{SD\\diversity} \\
-\midrule
-\endfirsthead
-\caption[]{Summary of maps and microbiome} \\
-\toprule
-\shortstack[l]{Map\\source} &
-\shortstack[l]{Class\\name} &
-\shortstack[c]{Area\\(km$^2$)} &
-\shortstack[c]{ISD\\Samples} &
-\shortstack[c]{Taxa\\richness} &
-\shortstack[c]{ASV\\richness} &
-\shortstack[c]{Mean\\diversity} &
-\shortstack[c]{SD\\diversity} \\
-\midrule
-\endhead
-\midrule
-\multicolumn{8}{r}{{Continued on next page}} \\
-\midrule
-\endfoot
-
-\bottomrule
-\endlastfoot
-             wdpa &                                  Aesthetic Forest &    0.2 &       0 &             0 &            0 &            0 &          0 \\
-             wdpa &Sites of Community Importance (Habitats Directive) &    0.3 &       0 &             0 &            0 &            0 &          0 \\
-             wdpa &                             Game breeding station &      1 &       0 &             0 &            0 &            0 &          0 \\
-             wdpa &                           Controlled hunting area &   11.6 &       0 &             0 &            0 &            0 &          0 \\
-             wdpa &             Core zone in National (Woodland) Park &   47.6 &       0 &             0 &            0 &            0 &          0 \\
-             wdpa &                      UNESCO-MAB Biosphere Reserve &   88.7 &       0 &             0 &            0 &            0 &          0 \\
-             wdpa &                                  Protected Forest &  417.7 &       0 &             0 &            0 &            0 &          0 \\
-             wdpa &                                   Wildlife Refuge &  610.7 &      27 &         11333 &        52770 &         4.76 &       0.23 \\
-             wdpa &         Special Protection Area (Birds Directive) & 1261.8 &      40 &         16668 &        80798 &         4.73 &       0.24 \\
-             wdpa &Special Areas of Conservation (Habitats Directive) & 2371.4 &      62 &         26230 &       121403 &         4.77 &       0.24 \\
-             wdpa &                      total protected (no overlap) & 2900.6 &       0 &             0 &            0 &            0 &          0 \\
-             wdpa &                                   total protected &   4811 &       0 &             0 &            0 &            0 &          0 \\
-              CLC &                                       Arable land &   88.3 &       4 &          1518 &         6178 &         4.73 &       0.17 \\
-              CLC &      Artificial, non-agricultural vegetated areas &   20.7 &       0 &             0 &            0 &            0 &          0 \\
-              CLC &                                           Forests &  299.9 &       4 &          1803 &         8663 &         4.91 &       0.18 \\
-              CLC &                  Heterogeneous agricultural areas &   1103 &      31 &         13701 &        59581 &         4.83 &       0.24 \\
-              CLC &        Industrial, commercial and transport units &   39.8 &       4 &          1760 &         6517 &         4.79 &       0.32 \\
-              CLC &                                     Inland waters &    6.7 &       0 &             0 &            0 &            0 &          0 \\
-              CLC &                 Mine, dump and construction sites &     10 &       0 &             0 &            0 &            0 &          0 \\
-              CLC &          Open spaces with little or no vegetation &  410.7 &       7 &          3132 &        14568 &         4.85 &       0.21 \\
-              CLC &                                          Pastures &   59.2 &       4 &          1609 &         7535 &         4.85 &       0.14 \\
-              CLC &                                   Permanent crops & 2367.7 &      22 &          9999 &        43833 &         4.88 &       0.18 \\
-              CLC &   Scrub and/or herbaceous vegetation associations & 3797.8 &      58 &         24394 &       110127 &         4.76 &       0.29 \\
-              CLC &                                      Urban fabric &  110.6 &       4 &          1765 &         9828 &         4.78 &       0.19 \\
-          Geology &                                                 - &    0.6 &       0 &             0 &            0 &            0 &          0 \\
-          Geology &                                               J-E & 1346.9 &      22 &          8995 &        41730 &         4.75 &       0.25 \\
-          Geology &                                               K-E &    248 &       0 &             0 &            0 &            0 &          0 \\
-          Geology &                                               K.k &   1253 &      27 &         11277 &        51737 &         4.72 &       0.25 \\
-          Geology &                                               K.m &   12.9 &       0 &             0 &            0 &            0 &          0 \\
-          Geology &                                                Mk &    812 &      13 &          5618 &        24633 &         4.79 &        0.2 \\
-          Geology &                                              Mm.I & 1614.3 &      12 &          5259 &        22854 &         4.86 &       0.15 \\
-          Geology &                                              Ph-T & 1012.1 &      14 &          6720 &        29742 &         4.92 &       0.19 \\
-          Geology &                                              Q.al &  910.7 &      34 &         15580 &        64851 &         4.91 &       0.27 \\
-          Geology &                                              T.br &  299.6 &       2 &           625 &         2839 &          4.4 &       0.24 \\
-          Geology &                                                 f &  117.8 &       2 &           720 &         4753 &          4.5 &       0.01 \\
-          Geology &                                                fo &  317.6 &       2 &           825 &         4606 &         4.65 &       0.04 \\
-          Geology &                                                ft &  275.5 &      10 &          4062 &        19085 &         4.79 &       0.17 \\
-          Geology &                                                 o &   93.9 &       0 &             0 &            0 &            0 &          0 \\
- Hilda+ 1976-2016 &                                    urban (stable) &    242 &       4 &          1872 &         7656 &         4.96 &       0.15 \\
- Hilda+ 1976-2016 &                                 urban to cropland &      5 &       0 &             0 &            0 &            0 &          0 \\
- Hilda+ 1976-2016 &                        urban to pasture/rangeland &      2 &       0 &             0 &            0 &            0 &          0 \\
- Hilda+ 1976-2016 &                urban to unmanaged grass/shrubland &      1 &       0 &             0 &            0 &            0 &          0 \\
- Hilda+ 1976-2016 &                                 cropland to urban &     57 &       0 &             0 &            0 &            0 &          0 \\
- Hilda+ 1976-2016 &                                 cropland (stable) &   1150 &      14 &          6005 &        27298 &          4.8 &       0.15 \\
- Hilda+ 1976-2016 &                     cropland to pasture/rangeland &    674 &      10 &          4392 &        20181 &         4.88 &       0.14 \\
- Hilda+ 1976-2016 &                                cropland to forest &    149 &       4 &          2191 &         8674 &         5.09 &       0.15 \\
- Hilda+ 1976-2016 &             cropland to unmanaged grass/shrubland &      8 &       0 &             0 &            0 &            0 &          0 \\
- Hilda+ 1976-2016 &                        pasture/rangeland to urban &     73 &       0 &             0 &            0 &            0 &          0 \\
- Hilda+ 1976-2016 &                     pasture/rangeland to cropland &    180 &       4 &          1283 &         4520 &         4.54 &       0.27 \\
- Hilda+ 1976-2016 &                        pasture/rangeland (stable) &   4645 &      75 &         31917 &       150214 &         4.78 &       0.24 \\
- Hilda+ 1976-2016 &                       pasture/rangeland to forest &    182 &       0 &             0 &            0 &            0 &          0 \\
- Hilda+ 1976-2016 &    pasture/rangeland to unmanaged grass/shrubland &    108 &       0 &             0 &            0 &            0 &          0 \\
- Hilda+ 1976-2016 &         pasture/rangeland to sparse/no vegetation &      1 &       0 &             0 &            0 &            0 &          0 \\
- Hilda+ 1976-2016 &                       forest to pasture/rangeland &     31 &       0 &             0 &            0 &            0 &          0 \\
- Hilda+ 1976-2016 &                                   forest (stable) &    136 &       0 &             0 &            0 &            0 &          0 \\
- Hilda+ 1976-2016 &               forest to unmanaged grass/shrubland &      1 &       0 &             0 &            0 &            0 &          0 \\
- Hilda+ 1976-2016 &                unmanaged grass/shrubland to urban &     13 &       0 &             0 &            0 &            0 &          0 \\
- Hilda+ 1976-2016 &             unmanaged grass/shrubland to cropland &     53 &       0 &             0 &            0 &            0 &          0 \\
- Hilda+ 1976-2016 &    unmanaged grass/shrubland to pasture/rangeland &    341 &       0 &             0 &            0 &            0 &          0 \\
- Hilda+ 1976-2016 &               unmanaged grass/shrubland to forest &     33 &       0 &             0 &            0 &            0 &          0 \\
- Hilda+ 1976-2016 &                unmanaged grass/shrubland (stable) &      9 &       0 &             0 &            0 &            0 &          0 \\
- Hilda+ 1976-2016 &                  sparse/no vegetation to cropland &     10 &       0 &             0 &            0 &            0 &          0 \\
- Hilda+ 1976-2016 &         sparse/no vegetation to pasture/rangeland &     97 &       6 &          2406 &        10870 &         4.68 &       0.27 \\
- Hilda+ 1976-2016 &                     sparse/no vegetation (stable) &      6 &       0 &             0 &            0 &            0 &          0 \\
- Hilda+ 1976-2016 &                                             water &    165 &      21 &          9615 &        37417 &         4.88 &       0.32 \\
-          Aridity &                                         Semi-Arid &   6438 &      98 &         43064 &       184930 &         4.83 &       0.25 \\
-          Aridity &                                     Dry sub-humid &   1368 &      32 &         13649 &        65134 &         4.79 &       0.21 \\
-          Aridity &                                             Humid &    554 &       8 &          2968 &        16766 &         4.55 &       0.19 \\
-  Desertification &                                                 N &    190 &       0 &             0 &            0 &            0 &          0 \\
-  Desertification &                                                F2 &   2367 &      53 &         23404 &       103956 &         4.82 &       0.26 \\
-  Desertification &                                                F1 &   1858 &      22 &          8817 &        41020 &          4.7 &       0.23 \\
-  Desertification &                                                 P &   1789 &      36 &         16256 &        73256 &         4.86 &       0.19 \\
-  Desertification &                                                C2 &    742 &       6 &          2113 &         9105 &         4.59 &       0.22 \\
-  Desertification &                                       Other areas &    453 &       0 &             0 &            0 &            0 &          0 \\
-  Desertification &                                                F3 &   1413 &      14 &          5900 &        25362 &         4.82 &       0.28 \\
-  Desertification &                                                C1 &   1011 &       7 &          3191 &        14131 &         4.93 &       0.25 \\
-  Desertification &                                                C3 &    239 &       0 &             0 &            0 &            0 &          0 \\
-  Soil Erosion G2 &                                           0 - 0.5 &   2935 &      53 &         23605 &       105741 &         4.85 &       0.21 \\
-  Soil Erosion G2 &                                           0.5 - 1 &    453 &       6 &          3180 &        11452 &          5.1 &       0.18 \\
-  Soil Erosion G2 &                                             1 - 2 &    604 &       8 &          3315 &        13574 &          4.7 &       0.36 \\
-  Soil Erosion G2 &                                           10 - 20 &    441 &       9 &          3957 &        17821 &         4.83 &       0.15 \\
-  Soil Erosion G2 &                                             2 - 5 &    821 &      20 &          8333 &        38966 &         4.73 &       0.26 \\
-  Soil Erosion G2 &                                            5 - 10 &    531 &      16 &          7518 &        33010 &          4.9 &       0.23 \\
-  Soil Erosion G2 &                                               >20 &    634 &      18 &          6805 &        29500 &         4.72 &       0.22 \\
-            HWSD2 &                                Calcaric Fluvisols &    618 &      11 &          5191 &        22016 &         4.95 &       0.18 \\
-            HWSD2 &                                 Calcaric Regosols &   2321 &      47 &         20066 &        85394 &         4.79 &       0.25 \\
-            HWSD2 &                                  Chromic Luvisols &    793 &      17 &          7099 &        35310 &         4.74 &       0.23 \\
-            HWSD2 &                                  Eutric Cambisols &    101 &       0 &             0 &            0 &            0 &          0 \\
-            HWSD2 &                                  Lithic Leptosols &   4926 &      63 &         27325 &       124110 &         4.81 &       0.25 \\
-            HWSD2 &                                        Technosols &     39 &       0 &             0 &            0 &            0 &          0 \\
-             GDAM &                                             Crete & 8346.5 &       0 &             0 &            0 &            0 &          0 \\
-\end{longtable}
-\endgroup
-
 
 
 \begin{table}[h!]
@@ -935,8 +308,6 @@ Thus, 138 samples in total were included in the subsequent analysis.
 
 
 \section{Data and Code}
-Scripts about data retrieval and integration are available in
-\href{https://github.com/savvas-paragkamian/crete-idea.git}{Crete data integration repository}.
 Scripts about the soil health assessment are available in 
 \href{https://github.com/savvas-paragkamian/crete-soil-health.git}{Crete soil health assessment repository}.
 This repository contains all the necessary scripts for the microbiome data retrieval,
@@ -947,23 +318,22 @@ functional annotation and the subsequent analyses and visualisation.
 No competing interest is declared.
 
 \section{Author contributions statement}
-Conceptualization: GK, SP, EP, LS;
+Conceptualization: SP, EP, LS, JH;
 Data curation: SP;
-Formal Analysis: SP, JH;
+Formal Analysis: SP, JH, HZ;
 Funding acquisition: SP, EP, PFS;
 Investigation: SP, JH, HS, CP;
 Methodology: SP, JH, HS, CP, CC;
-Project administration: GK, EP, LS;
+Project administration: EP, LS;
 Resources: SP, GK, EP;
 Software: SP, JH, HZ;
-Supervision: GK, EP, LS, PFS, IA;
+Supervision: EP, LS, PFS, IA;
 Validation: JH, CP, CC, HZ, PFS, LS, EP;
 Visualization: SP;
-Writing – original draft: SP;
+Writing – original draft: SP, JH, HZ, CP;
 Writing – review and editing: All authors.
 
 \section{Acknowledgments}
-SP thanks Dr Neil Davies for fruitful discussions and Lena Sfakianaki for the assistance with the graphic design.
 
 \section{Funding}
 SP was supported by the 3rd H.F.R.I. Scholarships for PHD Candidates (no. 5726) for his work.
